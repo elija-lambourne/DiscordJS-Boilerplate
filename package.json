@@ -1,0 +1,31 @@
+{
+  "name": "discordjs-boilerplate",
+  "version": "1.0.0",
+  "description": "A boilerplate for discord bots",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/elija-lambourne/DiscordJS-Boilerplate.git"
+  },
+  "keywords": [
+    "discordjs"
+  ],
+  "author": "elija-lambourne",
+  "license": "WTFPL",
+  "bugs": {
+    "url": "https://github.com/elija-lambourne/DiscordJS-Boilerplate/issues"
+  },
+  "homepage": "https://github.com/elija-lambourne/DiscordJS-Boilerplate#readme",
+  "dependencies": {
+    "@discordjs/builders": "^1.4.0",
+    "@discordjs/rest": "^1.4.0",
+    "better-sqlite3": "^8.0.1",
+    "discord-api-types": "^0.37.21",
+    "discord.js": "^14.7.1",
+    "dotenv": "^16.0.3",
+    "quick.db": "^9.0.7"
+  }
+}
