@@ -1,8 +1,5 @@
 const Discord = require("discord.js");
 const cooldowns = new Map();
-const {QuickDB} = require("quick.db");
-const db = new QuickDB({filePath: "../../databases/database.sqlite"});
-const accounts = new db.table("accounts");
 
 module.exports = {
   name: "interactionCreate",
@@ -18,20 +15,10 @@ module.exports = {
     const command = client.commands.get(interaction.commandName);
 
     if (!command) return;
-    accounts.delete(`${interaction.member.id}`);
-    if (interaction.commandName === "start") {
-      const account = accounts.get(`${interaction.member.id}`); //Make efficient
-      if (account && account.status === "in progress") {
-        return interaction.reply({
-          content: "Please stop the current setup first.",
-          ephemeral: true,
-        });
-      }
-    }
 
     //Maintenance
     const notAvailable = command.maintenance;
-    if (notAvailable === true && interaction.member.id !== "448486685999628319") {
+    if (notAvailable ===  true && interaction.member.id !== "448486685999628319") {
       return interaction.reply({ embeds: [underMaintenance], ephemeral: true });
     }
 
