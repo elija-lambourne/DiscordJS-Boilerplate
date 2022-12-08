@@ -1,4 +1,12 @@
 # DiscordJS-Boilerplate
+**Important!**<br>
+Do not forget that the commands only work for one server and client(your bot) which you put into the variables!<br>
+<img width="544" alt="image" src="https://user-images.githubusercontent.com/105623585/206517145-cf4ca089-3dce-496c-9b43-11c4c9a982b6.png">
+
+You can change that and deploy commands globaly: https://youtu.be/ZtDtjjUHbIg
+
+
+
 **Dependencies**<br>
   -> @discordjs/builders <br>
   -> @discordjs/rest<br>
