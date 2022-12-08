@@ -18,12 +18,12 @@ require("dotenv").config();
 client.commands = new Discord.Collection();
 
 const eventFiles = fs
-  .readdirSync("./events")
-  .filter((file) =>  file.endsWith(".js"));
+    .readdirSync("./events")
+    .filter((file) =>  file.endsWith(".js"));
 const commandFolders = fs.readdirSync("./commands");
 const handlers = fs
-  .readdirSync("./handlers")
-  .filter((file) => file.endsWith(".js"));
+    .readdirSync("./handlers")
+    .filter((file) => file.endsWith(".js"));
 
 (async () => {
   for (let file of handlers) {

@@ -1,4 +1,4 @@
-const Discord = require("discord.js");
+const {Discord, Collection, EmbedBuilder} = require("discord.js");
 const cooldowns = new Map();
 
 module.exports = {
@@ -6,9 +6,9 @@ module.exports = {
   async execute(interaction) {
     const client = interaction.client;
 
-    const underMaintenance = new Discord.MessageEmbed()
-      .setDescription(":hammer: This command is currently under maintenance")
-      .setColor("4169e1");
+    const underMaintenance = new EmbedBuilder()
+        .setDescription(":hammer: This command is currently under maintenance")
+        .setColor("#4169e1");
 
     if (!interaction.isCommand()) return;
 
@@ -78,7 +78,7 @@ module.exports = {
 
     //Cooldown
     if (!cooldowns.has(command.name)) {
-      cooldowns.set(command.name, new Discord.Collection());
+      cooldowns.set(command.name, new Collection());
     }
 
     const currentTime = Date.now();
@@ -93,7 +93,7 @@ module.exports = {
 
         return interaction.reply({
           content: `Please wait another ${timeLeft.toFixed(
-            1
+              1
           )} seconds before using the command again`,
           ephemeral: true,
         });
