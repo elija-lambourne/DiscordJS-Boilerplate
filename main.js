@@ -1,15 +1,15 @@
-import fs from "fs";
+const fs = require("fs");
 
 const Discord = require("discord.js");
 const client = new Discord.Client({
   intents: [
-    Discord.Intents.FLAGS.GUILDS,
-    Discord.Intents.FLAGS.GUILD_MESSAGES,
-    Discord.Intents.FLAGS.GUILD_MEMBERS,
-    Discord.Intents.FLAGS.GUILD_VOICE_STATES,
-    Discord.Intents.FLAGS.GUILD_PRESENCES,
-    Discord.Intents.FLAGS.GUILD_MESSAGE_TYPING,
-    Discord.Intents.FLAGS.GUILD_MESSAGE_REACTIONS,
+    Discord.GatewayIntentBits.Guilds,
+    Discord.GatewayIntentBits.GuildMessages,
+    Discord.GatewayIntentBits.GuildMembers,
+    Discord.GatewayIntentBits.GuildVoiceStates,
+    Discord.GatewayIntentBits.GuildPresences,
+    Discord.GatewayIntentBits.GuildMessageTyping,
+    Discord.GatewayIntentBits.GuildMessageReactions,
   ],
 });
 
@@ -19,7 +19,7 @@ client.commands = new Discord.Collection();
 
 const eventFiles = fs
   .readdirSync("./events")
-  .filter((file) => file.endsWith(".js"));
+  .filter((file) =>  file.endsWith(".js"));
 const commandFolders = fs.readdirSync("./commands");
 const handlers = fs
   .readdirSync("./handlers")
