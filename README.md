@@ -4,8 +4,6 @@
   -> @discordjs/rest<br>
   -> discord.js<br>
   -> discord-api-types<br>
-  -> quick.db<br>
-  -> better-sqlite3<br>
   
 **Features**<br>
   -> Very basic boilerplate with command handling and event handling<br>
