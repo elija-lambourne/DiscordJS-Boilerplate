@@ -18,6 +18,6 @@
 ![image](https://user-images.githubusercontent.com/105623585/206398351-630876dc-fb32-4a6d-89af-7e42cab252cf.png)
 <br>
 2. Download zip<br>
-![image](https://user-images.githubusercontent.com/105623585/206398410-b0bac6b6-813b-4dfe-8e4a-4440b45a3517.png)
+![image](https://user-images.githubusercontent.com/105623585/206398874-02832c95-deae-4b9a-851b-45eb6ce460b8.png)
 <br>
 3. Install dependencies and don't forget to have fun! :)
